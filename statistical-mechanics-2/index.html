@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="王海羽">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="引言 三种系综的微观态分布 微正则系综与等概率分布 在微正则系综中，系统与外界既不进行能量交换也不进行物质交换，因此具有相同的能量与粒子数。系统每个微观态出现的概率相等： \[P_{\text {microstate}}&#x3D; const.\] 这正是等概率原理 正则系综与Boltzmann分布 在正则系综中，系统保持温度的恒定，但是系统能量存在涨落，我们希望研究这些不同能量的微观态随能量的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计力学2">
+<meta property="og:url" content="http://example.com/statistical-mechanics-2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="引言 三种系综的微观态分布 微正则系综与等概率分布 在微正则系综中，系统与外界既不进行能量交换也不进行物质交换，因此具有相同的能量与粒子数。系统每个微观态出现的概率相等： \[P_{\text {microstate}}&#x3D; const.\] 这正是等概率原理 正则系综与Boltzmann分布 在正则系综中，系统保持温度的恒定，但是系统能量存在涨落，我们希望研究这些不同能量的微观态随能量的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/ScreenShot_2025-12-02_110638_678.png">
+<meta property="article:published_time" content="2025-12-01T09:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-04T06:23:27.261Z">
+<meta property="article:author" content="王海羽">
+<meta property="article:tag" content="基本概念">
+<meta property="article:tag" content="统计力学">
+<meta property="article:tag" content="统计物理">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/ScreenShot_2025-12-02_110638_678.png">
+  
+  
+  
+  <title>统计力学2 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>海羽札记</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/friend/" target="_self">
+                <i class="iconfont icon-friends"></i>
+                <span>朋友</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/sea-2052650_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="统计力学2"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-12-01 17:00" pubdate>
+          2025年12月1日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          24 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">统计力学2</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="引言">引言</h1>
+<h2 id="三种系综的微观态分布">三种系综的微观态分布</h2>
+<h3 id="微正则系综与等概率分布">微正则系综与等概率分布</h3>
+<p>在微正则系综中，系统与外界既不进行能量交换也不进行物质交换，因此具有相同的能量与粒子数。系统每个微观态出现的概率相等： <span class="math display">\[P_{\text {microstate}}= const.\]</span> 这正是等概率原理</p>
+<h3 id="正则系综与boltzmann分布">正则系综与Boltzmann分布</h3>
+<p>在正则系综中，系统保持温度的恒定，但是系统能量存在涨落，我们希望研究这些不同能量的微观态随能量的分布情况。</p>
+<p>显然这些微观态不再是概率相等的了，因为等概率原理与各态遍历假设只适用于微正则系综。我们并没有直接可用来研究正则系综的公理或假设，但是可以把正则系综构造成微正则系综：假设系统与一个比他自己远远大的热源相接触，他们之间只能通过热传导的方式进行能量交换，且热源大到不论如何跟系统交换能量，他自身的温度都保持不变（或变化无穷小）。那么系统温度恒定的这个条件就等价为了与大热源接触，这样做的好处是我们可以将大热源与系统的整体看作是孤立系统，从而可以用微正则系综的研究方法来研究他 <img src="\img\ScreenShot_2025-12-02_110638_678.png" srcset="/img/loading.gif" lazyload title="系统温度恒定" alt="系统与大热源" /></p>
+<p>对于这个整体，他们拥有能量E，且整体的每一种微观态都概率相等。设系统某一特定的微观状态能量为ε，那么热源的能量就是E-ε，这一特定系统微观态出现的概率<span class="math inline">\(P(ε)\)</span>就正比于相应的整体所包含的微观状态数：<span class="math display">\[P(ε)\propto \Omega(E-ε)\times1\]</span></p>
+<p>由于ε⋘E，我们可以作泰勒展开： <span class="math display">\[\ln \Omega(E-\epsilon)=\ln \Omega(E)-\frac{\mathrm{d} \ln \Omega(E)}{\mathrm{d} E} \epsilon+\cdots\]</span> 使用温度的定义，我们把第二项换成热源的温度T（由于热平衡，这同样也是系统的温度T）： <span class="math display">\[\ln \Omega(E-\epsilon)=\ln \Omega(E)-\frac{\epsilon}{k_{\mathrm{B}} T}+\cdots\]</span> <span class="math display">\[\Omega(E-\epsilon)=\Omega(E) \mathrm{e}^{-\epsilon / k_{\mathrm{B}} T}\]</span> 又因为<span class="math inline">\(\Omega(E)\)</span>是个常数，因此能量为<span class="math inline">\(E_s\)</span>的一个系统微观态的概率就是： <span class="math display">\[P(E_s) = \frac{1}{Z}\cdot\mathrm{e}^{-E_s / k_{\mathrm{B}} T}=\frac{1}{Z}\cdot\mathrm{e}^{-\beta E_s}\]</span> 其中： - <span class="math inline">\(E_s\)</span>是微观态s的能量 - β是<span class="math inline">\(1 / k_{\mathrm{B}} T\)</span> - Z是正则配分函数（归一化因子）（对微观态求和）：<span class="math display">\[Z=\sum_{s}\mathrm{e}^{-\beta E_s}\]</span> - <span class="math inline">\(P(E_s)\)</span>是系统确定N,V,T这几个状态量后，处于微观态s的概率。</p>
+<h3 id="熵S的偏微分关系">巨正则系综与Gibbs分布</h3>
+<p>考虑一个系统固定温度和化学势（体积因为不涉及所以也默认固定），我们还是假想他与一个大热源同时也是大粒子源接触，他们的总能量U以及总粒子数N固定。那么对于能量为ε、粒子数为N的一个特定系统微观态来说，他的概率就正比于源此时包含的微观状态数<span class="math inline">\(Ω(U-ε,N-n)=e^{S(U-ε,N-n)/k_B}\)</span></p>
+<p>因为现在源和系统处于热平衡和化学平衡态，所以源的温度就是系统的温度，源的化学势就是系统的化学势。</p>
+<p>对源进行泰勒展开：<span class="math display">\[S(U-\varepsilon, N-n)=S(U, N)-\varepsilon\left(\frac{\partial S}{\partial U}\right)_{N, V}- n\left(\frac{\partial S}{\partial N}\right)_{U, V} 
+\]</span></p>
+<p>为了知道展开的线性项，我们S写为U、V、N的函数然后跟热力学基本方程做对比有： <span class="math display">\[S=S(U, V, N) \Rightarrow d S=\left(\frac{\partial S}{\partial U}\right)_{N, V} d U+\left(\frac{\partial S}{\partial V}\right)_{N, U} d V+\left(\frac{\partial S}{\partial N}\right)_{U, V} dN\]</span> <span class="math display">\[d U=T d S-p d V+\mu d N \Rightarrow d S=\frac{d U}{T}+\frac{p d V}{T}-\frac{\mu d N}{T}\]</span></p>
+<p>得到如下关系：<span class="math display">\[\left(\frac{\partial S}{\partial U}\right)_{N, V}=\frac{1}{T} ;\left(\frac{\partial S}{\partial V}\right)_{N, U}=\frac{p}{T} ; \left(\frac{\partial S}{\partial N}\right)_{U, V}=-\frac{\mu}{T}\]</span></p>
+<p>那么一开始的展开：<span class="math display">\[S(U-\varepsilon, N-n)=S(U, N)-\varepsilon \cdot \frac{1}{T}+n \cdot \frac{\mu}{T}\]</span></p>
+<p>系统处于能量为ε、粒子数为N的概率：<span class="math inline">\(P(\varepsilon, n) \propto e^{\beta(\mu n-\varepsilon)}\)</span></p>
+<p>对于给定温度和化学势的系统，其能量为<span class="math inline">\(E_i\)</span>、粒子数为<span class="math inline">\(N_i\)</span>的微观态的概率为：<span class="math display">\[P i=\frac{1}{Z} \cdot e^{\beta\left(\mu N_{i}-E_{i}\right)} \quad ; \quad Z=\sum_{i} e^{\beta\left(\mu N_{i}-E_{i}\right)}\]</span> 其中Z是巨配分函数。</p>
+<h2 id="最大熵原理推导系综微观态分布">最大熵原理推导系综微观态分布</h2>
+<p>我们根据最大熵原理，结合不同系综对应的约束条件，同样可以推导出微观态的分布函数。在数学上，就是使得熵<span class="math inline">\(S=-k_B\sum_{i}P_ilnP_i\)</span>在满足特定约束的情况下取得极值，可以使用拉格朗日乘子法。</p>
+<h3 id="微正则系综">微正则系综</h3>
+<p>约束条件：</p>
+<ol type="1">
+<li>概率归一化：<span class="math inline">\(\sum_{i} p_{i}=1\)</span></li>
+<li>能量精确固定：当且仅当取孤立系统的固定能量时:<span class="math inline">\(E_{i} = E\)</span>，微观态才有可能出现：<span class="math inline">\(p_{i}\neq 0\)</span></li>
+</ol>
+<p>构造拉格朗日函数：</p>
+<p><span class="math display">\[\mathcal{L}=-k_{B} \sum^{\prime} p_{i} \ln p_{i}+\lambda\left(1-\sum^{\prime} p_{i}\right)\]</span></p>
+<p>其中仅仅对<span class="math inline">\(E_{i} = E\)</span>的态求和即可。对<span class="math inline">\(p_i\)</span>求导：</p>
+<p><span class="math display">\[\frac{\partial \mathcal{L}}{\partial p_{i}}=-k_{B}\left(\ln p_{i}+1\right)-\lambda=0\]</span> 解得：<span class="math inline">\(p_{i}=e^{-\lambda / k_{B}-1}\)</span></p>
+<p>可见所有能量为E的微观态都具有相等的概率，归一化就得到：<span class="math display">\[p_{i}=\frac{1}{\Omega(E)}\]</span></p>
+<p>即微正则系综所有可能微观态概率相同，这就是等概率原理！值得注意的是：作为统计力学的基本原理，等概率原理应当是不能被推出来的，但为什么这里“推出”了呢？因为这里推导的过程我们已经“知道”了熵的具体表达式（以熵的表达式作为出发点），而我们最开始是从等概率原理出发推导温度的表达式，进而比较得出熵的具体表达式的。因此，等概率原理和熵的表达式二选一有一个必须作为基本原理，然后才可以推出另外一个。</p>
+<h3 id="正则系综">正则系综</h3>
+<p>约束条件：</p>
+<ol type="1">
+<li>概率归一化：<span class="math inline">\(\sum_{i} p_{i}=1\)</span></li>
+<li>温度固定（温度固定是热力学强度量，而使用统计方法应当从可测量的统计量出发，在这里温度固定就意味着系统的平均能量固定，因为系统的平均能量是温度的正相关函数）：<span class="math inline">\(\sum_i p_{i} E_{i}=\langle E\rangle\)</span></li>
+</ol>
+<p>引入拉格朗日乘子α和β，构造拉格朗日函数： <span class="math display">\[\mathcal{L}=-k_{B} \sum_{i} p_{i} \ln p_{i}+\alpha\left(1-\sum_{i} p_{i}\right)+\beta\left(\langle E\rangle-\sum_{i} p_{i} E_{i}\right)\]</span> 对每个<span class="math inline">\(p_i\)</span>求导： <span class="math display">\[\frac{\partial \mathcal{L}}{\partial p_{i}}=-k_{B}\left(\ln p_{i}+1\right)-\alpha-\beta E_{i}=0\]</span> 得到：<span class="math display">\[\ln p_{i}=-\frac{\alpha}{k_{B}}-1-\frac{\beta}{k_{B}} E_{i}\]</span></p>
+<p>令常数<span class="math inline">\(\frac{\alpha}{k_{B}}+1=\ln Z\)</span>，则有： <span class="math display">\[p_{i}=\frac{1}{Z} e^{-\frac{\beta}{k_{B}} E_{i}}\]</span> 这样可以看出α是确定Z相关的，而Z就是正则系综的配分函数！</p>
+<p>现在我们要确定拉格朗日乘子β的物理含义（其实这个β乘子一般统计力学常用的那个β就相差了一个玻尔兹曼常量），我们用上面得到的<span class="math inline">\(p_i\)</span>计算熵有： <span class="math display">\[\begin{array}{c}S=-k_{B} \sum_{i} p_{i} \ln p_{i}=k_{B} \sum_{i} p_{i}\left(\ln Z+\frac{\beta}{k_{B}} E_{i}\right) \\ S=k_{B} \ln Z+\beta\langle E\rangle\end{array}\]</span></p>
+<p>而热力学中的内能“U”，就对应于统计力学中的能量平均值——系统所有可能微观状态的统计平均（或能量的系综平均）：<span class="math inline">\(U \equiv\langle E\rangle=\sum_{i} p_{i} E_{i}\)</span>（对态求和）</p>
+<p>又正则系综固定体积和粒子数： <span class="math display">\[\beta = \left(\frac{\partial S}{\partial\langle E\rangle}\right) = \left(\frac{\partial S}{\partial U}\right)_{V,N}= \frac{1}{T}\]</span></p>
+<p>最终我们得到了玻尔兹曼分布： <span class="math display">\[\begin{array}{l}p_{i}=\frac{1}{Z} e^{-E_{i} /\left(k_{B} T\right)} \\ Z=\sum_{i} e^{-E_{i} /\left(k_{B} T\right)}\end{array}\]</span></p>
+<h3 id="巨正则系综">巨正则系综</h3>
+<p>约束条件：</p>
+<ol type="1">
+<li>概率归一化：<span class="math inline">\(\sum_{i} p_{i}=1\)</span></li>
+<li>固定的平均能量（恒温）：<span class="math inline">\(\sum_i p_{i} E_{i}=\langle E\rangle\)</span></li>
+<li>固定的平均粒子数（恒化学势）：<span class="math inline">\(\sum_i p_{i} N_{i}=\langle N\rangle\)</span></li>
+</ol>
+<p>引入拉格朗日乘子α、β、μ，构造拉格朗日函数： <span class="math display">\[\mathcal{L}=-k_{B} \sum_{i} p_{i} \ln p_{i} + \alpha\left(1-\sum_{i} p_{i}\right)+\beta\left(\langle E\rangle-\sum_{i} p_{i} E_{i}\right)+\mu\left(\langle N\rangle-\sum_{i} p_{i} N_{i}\right) \]</span> 对所有<span class="math inline">\(p_i\)</span>求偏导有： <span class="math display">\[\frac{\partial \mathcal{L}}{\partial p_{i}}=-k_{B}\left(\ln p_{i}+1\right)-\alpha-\beta E_{i}-\mu N_{i}=0\]</span> <span class="math display">\[\ln p_{i}=-\frac{\alpha}{k_{B}}-\frac{\beta E_{i}}{k_{B}}-\frac{\mu N_{i}}{k_{B}}-1=-\ln Z-\frac{1}{k_{B}}\left(\beta E_{i}+\mu N_{i}\right) \]</span> 得到：<span class="math inline">\(p_{i}=\frac{1}{Z} e^{-k_{B}\left(\beta E_{i}+\mu N_{i}\right)}\)</span> 同样地，为了明确上式的分布中包含的拉格朗日乘子的含义，我们把他带入熵的表达式计算出来： <span class="math display">\[\begin{array}{l} S=k_{B} \frac{1}{Z} \sum_{i} e^{-\frac{1}{k_{B}}\left(\beta E_{i}+\mu N_{i}\right)} \cdot\left[\ln Z+\frac{1}{k_{B}}\left(\beta E_{i}+\mu N_{i}\right)\right] \\ =k_{B} \ln Z+\sum_{i} p_{i}\left(\beta E_{i}+\mu N_{i}\right)=k_{B} \ln Z+\beta\langle E\rangle+\mu\langle N\rangle \end{array}\]</span> 得到：<span class="math display">\[\beta=\frac{\partial S}{\partial \langle E\rangle}=\frac{\partial S}{\partial U}=\frac{1}{T} ; \mu = \frac{\partial S}{\partial \langle N\rangle}=\frac{\partial S}{\partial N}=-\frac{\mu}{T}\]</span> 把乘子的表达式带入，得到最终的Gibbs分布： <span class="math display">\[\begin{array}{l}
+p_{i}=\frac{1}{Z} e^{-\beta\left(E_{i}-\mu N_{i}\right)} \\ Z=\sum_{i} e^{-\beta\left(E_{i}-\mu N_{i}\right)}\end{array}\]</span> 其中<span class="math inline">\(E_{i}\ ，N_{i}\)</span>分别是微观态i的能量和粒子数，Z是巨配分函数（对所有微观态求和）。</p>
+<h2 id="系统的微观态">系统的微观态</h2>
+<p>微观态是研究特定系统时必须考虑的事，并且有着极高的重要性，如果我们不能准确理解和分析系统的微观态及其数目分布特征，我们将无法正确地进行任何深入研究。然而，对于不同的系统，微观态可能代表着不同的含义，这些含义的区别正是表现出了其物理内涵的不同。</p>
+<p>在经典的可分辨全同粒子系统中，确定系统的微观状态就是确定每一个粒子的单粒子态；而在量子力学的语境下，一个系统的微观状态指的是系统中每一个粒子在各个量子态上的一种占据方式，即明确每个单粒子量子态上占据的粒子数。</p>
+<p>若一个近独立粒子系统有确定的粒子数N，能量E，和体积V，这N个粒子按能级的分布为：</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">能级</th>
+<th style="text-align: center;">简并度</th>
+<th style="text-align: center;">粒子数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(ε_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(ω_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a_1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(ε_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(ω_2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a_2\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(ε_l\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(ω_l\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a_l\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+</tbody>
+</table>
+<p>简并度ω就是指处在同一能级的不同态的个数。“<span class="math inline">\(l\)</span>”标记能级（level）“<span class="math inline">\(s\)</span>”标记态（state）。 <span class="math display">\[\lbrace a_l \rbrace=\lbrace a_1,a_2,...,a_l,... \rbrace\]</span>被称为粒子数表象中按能级的一个分布，且满足约束条件： <span class="math display">\[\sum_{l}a_l=N
+\ ;\ \
+\sum_{l}a_l\cdotε_l=E\]</span> 前面所说的近独立性则体现在能量约束条件中，由于粒子之间没有相互作用，总能量可以按能级乘以粒子数相加。</p>
+<p>上面的约束条件就是系统所处的宏观态N，V，E给出的条件，由此也可以看出一个宏观态能对应于多个微观态。</p>
+<h2 id="boltzmann-系统">Boltzmann 系统</h2>
+<h3 id="boltzmann-系统微观状态数">Boltzmann 系统微观状态数</h3>
+<h2 id="bose-系统">Bose 系统</h2>
+<h3 id="bose-einstein-分布">Bose-Einstein 分布</h3>
+<h3 id="bose-系统微观状态数">Bose 系统微观状态数</h3>
+<h2 id="fermi-系统">Fermi 系统</h2>
+<h3 id="fermi-dirac-分布">Fermi-Dirac 分布</h3>
+<h3 id="fermi-系统微观状态数">Fermi 系统微观状态数</h3>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/" class="category-chain-item">物理学</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/" class="category-chain-item">统计物理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/" class="category-chain-item">统计力学</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/" class="print-no-link">#统计物理</a>
+      
+        <a href="/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="print-no-link">#基本概念</a>
+      
+        <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/" class="print-no-link">#统计力学</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>统计力学2</div>
+      <div>http://example.com/statistical-mechanics-2/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>王海羽</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年12月1日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年12月4日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/lagrange-multipliers/" title="拉格朗日乘子法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">拉格朗日乘子法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/11/18/waterpaper/" title="一些规划">
+                        <span class="hidden-mobile">一些规划</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/password-protect.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

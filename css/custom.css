@@ -1,0 +1,59 @@
+/* 最小规则集：保持块级公式默认居中 */
+/* MathJax v3 */
+mjx-container[display="true"] {
+  display: block !important;
+  text-align: center !important;
+  margin: 0.75em auto !important;
+}
+
+/* MathJax v2 兼容 */
+.MathJax_Display {
+  text-align: center !important;
+  margin: 0.75em auto !important;
+}
+
+/* KaTeX 兼容 */
+.katex-display {
+  text-align: center !important;
+  margin: 0.75em auto !important;
+}
+
+/* Pandoc 兜底（MathJax 尚未接管时的结构） */
+.math.display,
+div.math.display {
+  display: block !important;
+  text-align: center !important;
+  margin: 0.75em auto !important;
+}
+
+/* About 页英文行样式：居中并放大字号 */
+.about-intro-en {
+  display: block;
+  text-align: center;
+  font-size: 1.6em;   /* 调整放大比例 */
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-top: 0.25em;
+}
+
+/* 默认：缩小文章内容中的所有图片（不影响 banner、导航等） */
+.markdown-body img {
+  width: 50%;       /* 全局缩放比例，按需调整 50%~80% */
+  height: auto;
+  display: block;
+  margin: 0.5em auto; /* 居中 */
+}
+
+/* 移动端下放宽，避免图片太小影响阅读 */
+@media (max-width: 768px) {
+  .markdown-body img {
+    width: 100%;
+  }
+}
+
+/* 工具类：为个别图片取消缩放或自定义比例（需给图片添加 class） */
+.markdown-body img.no-resize { width: auto; max-width: 100%; display: inline; margin: initial; }
+.markdown-body img.w-80 { width: 80%; }
+.markdown-body img.w-70 { width: 70%; }
+.markdown-body img.w-50 { width: 50%; }
+

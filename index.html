@@ -1,0 +1,1091 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="王海羽">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="王海羽">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>海羽札记</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/friend/" target="_self">
+                <i class="iconfont icon-friends"></i>
+                <span>朋友</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/sea-2052650_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="A Journey of Inner Discovery"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/classical-thermal-dynamics-2/" target="_self">
+          热力学2
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/classical-thermal-dynamics-2/" target="_self">
+        <div>
+          引言 这一篇我计划列举经典热力学中的许多有着重要历史地位和学习意义的例子，这些例子有些帮助我们建立了某一些热力学概念，有些加深了我们对热力学的理解。为了避免陈述的冗杂，我计划把大部分例子都放到一块儿集中展示，并且在阐释概念的时候引用必要的部分。除此之外，这一篇还将讨论和列举热力学和统计力学学习中所需的重要数学公式和一些量之间的转换关系，熟练掌握这些数学有助于我们更加充分地从更加全面的视角理解某个
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-12-05 13:30" pubdate>
+              2025-12-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/" class="category-chain-item">物理学</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/" class="category-chain-item">统计物理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/%E7%BB%8F%E5%85%B8%E7%83%AD%E5%8A%9B%E5%AD%A6/" class="category-chain-item">经典热力学</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/">#统计物理</a>
+            
+              <a href="/tags/%E7%BB%8F%E5%85%B8%E7%83%AD%E5%8A%9B%E5%AD%A6/">#经典热力学</a>
+            
+              <a href="/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">#基本概念</a>
+            
+              <a href="/tags/%E4%BE%8B%E5%AD%90/">#例子</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%A6%E5%85%B3%E7%B3%BB/">#数学关系</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/lagrange-multipliers/" target="_self">
+          拉格朗日乘子法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/lagrange-multipliers/" target="_self">
+        <div>
+          引言 拉格朗日乘子法是用来求解含有约束的情况下，目标函数的极值。这种方法在分析力学、统计物理等几乎所有物理学中都有着广泛的应用。约束可以分为几种类别，处理方法也会稍有异同。另外，求解过程中的拉格朗日乘子也有着丰富的物理内涵，例如对广义力的计算或者在统计物理中能对应于温度或化学势。 基本物理图像 如果我们要寻找一个函数\(f(\vec{x})=f(x_1,x_2,...,x_n)\)的最大值（
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-12-04 17:00" pubdate>
+              2025-12-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%A4%84%E7%90%86/" class="category-chain-item">数学处理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%A4%84%E7%90%86/%E5%BE%AE%E7%A7%AF%E5%88%86/" class="category-chain-item">微积分</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/statistical-mechanics-2/" target="_self">
+          统计力学2
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/statistical-mechanics-2/" target="_self">
+        <div>
+          引言 三种系综的微观态分布 微正则系综与等概率分布 在微正则系综中，系统与外界既不进行能量交换也不进行物质交换，因此具有相同的能量与粒子数。系统每个微观态出现的概率相等： \[P_{\text {microstate}}= const.\] 这正是等概率原理 正则系综与Boltzmann分布 在正则系综中，系统保持温度的恒定，但是系统能量存在涨落，我们希望研究这些不同能量的微观态随能量的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-12-01 17:00" pubdate>
+              2025-12-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/" class="category-chain-item">物理学</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/" class="category-chain-item">统计物理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/" class="category-chain-item">统计力学</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/">#统计物理</a>
+            
+              <a href="/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">#基本概念</a>
+            
+              <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/">#统计力学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/11/18/waterpaper/" target="_self">
+          一些规划
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/11/18/waterpaper/" target="_self">
+        <div>
+          总体规划 总体规划：水论文+水论文+水论文。博士二年级唯一紧迫且必要的任务就是水论文！希望在腿好的时候至少能水出一篇。在这样的环境下，做这样的学习，没有什么科研乐趣和学术追求好讲了，我唯一的目标就是尽快水够毕业的论文，然后早日对自己未来的规划安排做准备。 博士二年级 请水出两篇论文好吗，王弘毅，拜托你加油！ 博士三年级 请出国开开眼可以吗，王弘毅，至少半年吧，一年更好，能不能出去走走看看
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-11-18 15:40" pubdate>
+              2025-11-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%88%91%E7%9A%84%E6%95%85%E4%BA%8B/" class="category-chain-item">我的故事</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%88%91%E7%9A%84%E6%95%85%E4%BA%8B/%E7%A0%94%E7%A9%B6%E7%94%9F/" class="category-chain-item">研究生</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%97%A5%E8%AE%B0/">#日记</a>
+            
+              <a href="/tags/%E7%A7%91%E7%A0%94/">#科研</a>
+            
+              <a href="/tags/%E7%9B%AE%E6%A0%87/">#目标</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/11/15/rendaiduanlie/" target="_self">
+          2025.10.24-2025.11.15
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/11/15/rendaiduanlie/" target="_self">
+        <div>
+          自引 我大概会像是记流水账一样把目前还记得的细节写下来，并且写下我这期间混乱麻木的各种想法和感觉，即使我现在还并不能很好地描述事件，也不能准确地把自己的所思所想记录成文字以供参考。我甚至发现我其实并不能真正地思考，有条理有逻辑地描述以及分析，之前所有的绞尽脑汁似乎都只是我在自己的情绪和思绪乱流中被左右被冲刷被激荡，时而转向这个感受，时而突然思索那个回忆片段。思绪混乱如麻，并且不能集中精神针对某一
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-11-15 22:40" pubdate>
+              2025-11-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%88%91%E7%9A%84%E6%95%85%E4%BA%8B/" class="category-chain-item">我的故事</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%88%91%E7%9A%84%E6%95%85%E4%BA%8B/%E7%A0%94%E7%A9%B6%E7%94%9F/" class="category-chain-item">研究生</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%97%A5%E8%AE%B0/">#日记</a>
+            
+              <a href="/tags/%E7%96%BE%E7%97%85/">#疾病</a>
+            
+              <a href="/tags/%E6%AD%BB%E4%BA%A1/">#死亡</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/29/%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%802/" target="_self">
+          亨德尔的复活
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/29/%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%802/" target="_self">
+        <div>
+          亨德尔 乔治.腓特烈.亨德尔，是唯一能和巴赫比肩的巴洛克大师，他尤其擅长创作意大利歌剧和英语清唱剧，当然还写作了包括《水上音乐》和《烟火音乐》的不少伟大器乐作品。他于1685年生于德国哈莱，与巴赫同年，家中并无浓厚的音乐氛围，但他的音乐天赋着实过人，在11岁时就能作曲并教授他人管风琴。亨德尔曾顺父亲意愿去哈莱大学学习法律，但一年就辍学了，前往汉堡新开张的歌剧院并成为乐队的小提琴家和羽管键琴家。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-29 20:50" pubdate>
+              2025-10-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%98%85%E8%AF%BB%E5%BF%83%E5%BE%97/" class="category-chain-item">阅读心得</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%98%85%E8%AF%BB%E5%BF%83%E5%BE%97/%E5%B0%8F%E8%AF%B4/" class="category-chain-item">小说</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%98%85%E8%AF%BB%E5%BF%83%E5%BE%97/%E5%B0%8F%E8%AF%B4/%E8%8C%A8%E5%A8%81%E6%A0%BC/" class="category-chain-item">茨威格</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%8C%A8%E5%A8%81%E6%A0%BC/">#茨威格</a>
+            
+              <a href="/tags/%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80/">#群星闪耀</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/26/%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%801/" target="_self">
+          拜占庭的沦陷
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/26/%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%801/" target="_self">
+        <div>
+          小引 茨威格的小说实在是有超常的吸引力，尤其是我这种不喜爱阅读的人，读茨威格也会投入甚至入迷而持续几十分钟到几个小时。当时是在图书馆闲逛时发现了这位伟大的作家，先是读了一个“茨威格读本”，包含《一个陌生女人的来信》，《夜色朦胧》，《卡斯台利奥反抗加尔文》，《象棋的故事》等等名篇。我发现自己特别能对他的文字共情，大概也是因为他有着对人心真正细致入微的感悟与探索吧。后来于是乎就找来茨威格的许多知名作
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-26 16:00" pubdate>
+              2025-10-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%98%85%E8%AF%BB%E5%BF%83%E5%BE%97/" class="category-chain-item">阅读心得</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%98%85%E8%AF%BB%E5%BF%83%E5%BE%97/%E5%B0%8F%E8%AF%B4/" class="category-chain-item">小说</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%98%85%E8%AF%BB%E5%BF%83%E5%BE%97/%E5%B0%8F%E8%AF%B4/%E8%8C%A8%E5%A8%81%E6%A0%BC/" class="category-chain-item">茨威格</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%8C%A8%E5%A8%81%E6%A0%BC/">#茨威格</a>
+            
+              <a href="/tags/%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80/">#群星闪耀</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/statistical-mechanics-1/" target="_self">
+          统计力学1
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/statistical-mechanics-1/" target="_self">
+        <div>
+          引言 统计力学是以“态”的视角切入，以等概率原理和态遍历假设为公理基础，建立的从微观原理出发解释宏观现象的物理。 他不仅能从第一性原理出发，证明热力学的支柱性实验定律：热力学第零一二三定律；还能很自然地推广到量子的情况。 热力学从状态方程、响应函数以及热力学基本方程三个方面展开研究，而统计力学的研究主要就是一个方面：系统的配分函数，这是系统的特征函数。但是配分函数并不能完全包含热力学的三个方
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-23 11:00" pubdate>
+              2025-10-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/" class="category-chain-item">物理学</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/" class="category-chain-item">统计物理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%89%A9%E7%90%86%E5%AD%A6/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/" class="category-chain-item">统计力学</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86/">#统计物理</a>
+            
+              <a href="/tags/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">#基本概念</a>
+            
+              <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%8A%9B%E5%AD%A6/">#统计力学</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/reciprocal-and-reciprocity/" target="_self">
+          偏微分循环关系
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/reciprocal-and-reciprocity/" target="_self">
+        <div>
+          Reciprocal and Reciprocity Theorem \[\begin{aligned} &amp; f(x, y, z)=0 \\ \Rightarrow &amp; \left\{\begin{array}{l}1, x=x(y, z) \\ 2, z=z(x, y)\end{array}\right. \\ \Rightarrow &amp; \left\{\begin{a
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-22 15:00" pubdate>
+              2025-10-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%A4%84%E7%90%86/" class="category-chain-item">数学处理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%A4%84%E7%90%86/%E5%BE%AE%E7%A7%AF%E5%88%86/" class="category-chain-item">微积分</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/stirling&#39;sformula/" target="_self">
+          斯特林公式
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/stirling&#39;sformula/" target="_self">
+        <div>
+          资料下载：  点击在新标签页打开 PDF：Stirling’sFormula.pdf
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-22 14:00" pubdate>
+              2025-10-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%A4%84%E7%90%86/" class="category-chain-item">数学处理</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%A4%84%E7%90%86/%E5%BE%AE%E7%A7%AF%E5%88%86/" class="category-chain-item">微积分</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/password-protect.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
